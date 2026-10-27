@@ -1,0 +1,75 @@
+{
+  "skill_name": "despliegue",
+  "evals": [
+    {
+      "id": 1,
+      "name": "rollback-automatico",
+      "prompt": "Necesito un script de rollback automatico para mi app en Docker. Quiero que cuando haga deploy, verifique el health check y si falla, automaticamente vuelva a la version anterior. Dame el script completo.",
+      "expected_output": "Script rollback.sh con health check loop, rollback automatico en fallo, y notificacion",
+      "files": [],
+      "assertions": [
+        {"text": "Incluye docker compose down", "type": "contains"},
+        {"text": "Incluye health check con curl", "type": "contains"},
+        {"text": "Incluye tag previous", "type": "contains"},
+        {"text": "Incluye mensaje de rollback", "type": "contains"},
+        {"text": "Incluye exit con codigo", "type": "contains"}
+      ]
+    },
+    {
+      "id": 2,
+      "name": "deploy-vps-docker",
+      "prompt": "Tengo un VPS en 167.114.169.134 puerto 10000. Quiero desplegar mi app Docker alli desde Windows. Dame los comandos exactos para transferir los archivos, conectar por SSH y hacer deploy con docker-compose usando password.",
+      "expected_output": "Comandos PLINK/PSCP con password inline, docker-compose pull y up -d en VPS remoto",
+      "files": [],
+      "assertions": [
+        {"text": "plink.exe", "type": "contains"},
+        {"text": "pscp.exe", "type": "contains"},
+        {"text": "docker-compose pull", "type": "contains"},
+        {"text": "docker-compose up -d", "type": "contains"},
+        {"text": "-pw", "type": "contains"}
+      ]
+    },
+    {
+      "id": 3,
+      "name": "post-deploy-monitoreo",
+      "prompt": "Quiero un script que verifique que mi aplicación está bien después del deploy: revise el health endpoint, mida tiempos de respuesta, y revise los logs del contenedor en busca de errores. Dame el script completo.",
+      "expected_output": "Script post-deploy con health check multi-endpoint, benchmark de rendimiento y revision de logs",
+      "files": [],
+      "assertions": [
+        {"text": "health", "type": "contains"},
+        {"text": "curl", "type": "contains"},
+        {"text": "http_code", "type": "contains"},
+        {"text": "logs", "type": "contains"},
+        {"text": "error", "type": "contains"}
+      ]
+    },
+    {
+      "id": 4,
+      "name": "deploy-zero-downtime",
+      "prompt": "Necesito hacer un deploy sin downtime para mi app Node.js en un VPS con Docker Swarm. Dame la configuracion y los comandos.",
+      "expected_output": "Configuracion Docker Swarm con replicas, update_config parallelism, y comandos stack deploy",
+      "files": [],
+      "assertions": [
+        {"text": "replicas", "type": "contains"},
+        {"text": "update_config", "type": "contains"},
+        {"text": "parallelism", "type": "contains"},
+        {"text": "docker swarm init", "type": "contains"},
+        {"text": "docker stack deploy", "type": "contains"}
+      ]
+    },
+    {
+      "id": 5,
+      "name": "rollback-con-git",
+      "prompt": "Como debo combinar git y Docker tags para hacer rollback en el VPS? explícame el flujo recomendado y los comandos.",
+      "expected_output": "Explicacion del enfoque hibrido git + Docker tags, con comandos de deploy, taggeo y rollback",
+      "files": [],
+      "assertions": [
+        {"text": "git rev-parse", "type": "contains"},
+        {"text": "previous", "type": "contains"},
+        {"text": "docker tag", "type": "contains"},
+        {"text": "rollback", "type": "contains"},
+        {"text": "git pull", "type": "contains"}
+      ]
+    }
+  ]
+}

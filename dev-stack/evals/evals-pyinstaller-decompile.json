@@ -1,0 +1,78 @@
+{
+  "skill_name": "pyinstaller-decompile",
+  "skill_description": "Deconstruir ejecutables PyInstaller (.exe) para recuperar código fuente Python",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Tengo un ejecutable llamado 'tipeador_cuadros.exe' que perdí el código fuente. Solo sé que fue hecho con PyInstaller y que tipea números de un Excel en un sistema de gestión. Necesito que lo analices y me digas exactamente qué hace, y que reconstruyas el script Python original. El .exe está en C:\\Users\\yo\\Desktop\\tipeador_cuadros.exe",
+      "expected_output": "Un análisis completo del .exe que incluya: detección de PyInstaller, extracción de .pyc, análisis del bytecode con constantes/names/varnames, documentación de la secuencia de teclado, y reconstrucción del código fuente Python con preguntas al usuario sobre el comportamiento observado.",
+      "should_trigger": true,
+      "files": []
+    },
+    {
+      "id": 2,
+      "expected_output": "Preguntas estructuradas al usuario sobre: (1) el significado del INT encontrado en constantes, (2) la secuencia exacta de teclas observada, (3) el comportamiento visual del programa, (4) los detalles del archivo Excel de entrada. Incluyendo contexto de por qué se necesita cada respuesta.",
+      "prompt": "Ya extraje el .pyc del ejecutable y tengo el análisis del bytecode. Las constantes muestran: STR 'Esperando Ejecucion:', INT 9, INT -1, INT 1, INT 3, STR '\\nINICIANDO!', TUPLE ('\\t', 'down', 'space'), INT 10, STR 'backspace', STR 'tiempo: '. Los names muestran pyautogui, time, openpyxl, sys, print, range. Ayúdame a entender qué significa cada constante, especialmente el INT 10 que no sé si es un timeout o repeticiones.",
+      "should_trigger": true,
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Tengo este archivo .pyc que saqué de un .exe con pyinstxtractor: C:\\Users\\yo\\app.pyc. Usando marshal.load() necesito entender qué funciones tiene, qué imports hace, qué constantes usa y cómo reconstruir el código. El magic number es CB0D0D0A (Python 3.12).",
+      "expected_output": "Análisis completo del .pyc incluyendo: lista de constantes categorizadas, names identificados (módulos, funciones, builtins), varnames, funciones anidadas detectadas, bytecode desensamblado, y guía de cómo proceder con la reconstrucción manual.",
+      "should_trigger": true,
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Necesito compilar mi script Python a un .exe con PyInstaller para distribuirlo. El script usa tkinter y pandas. ¿Cuál es el comando correcto?",
+      "expected_output": "No debe activarse esta skill — la solicitud es de compilación/empaquetado con PyInstaller, no de deconstrucción.",
+      "should_trigger": false,
+      "files": []
+    },
+    {
+      "id": 5,
+      "prompt": "Encontré un .exe sospechoso en mi carpeta de Descargas, quiero saber si fue hecho con PyInstaller y qué código contiene. La ruta es C:\\Users\\yo\\Downloads\\programa_extraño.exe. Quiero extraer todo el código posible para entender qué hace.",
+      "expected_output": "Proceso completo: detectar PyInstaller (buscar firma en el .exe), extraer con pyinstxtractor, identificar entry point, analizar bytecode, y generar preguntas al usuario sobre el comportamiento observado. Con énfasis en la seguridad y advertencia legal.",
+      "should_trigger": true,
+      "files": []
+    },
+    {
+      "id": 6,
+      "prompt": "Estoy haciendo un curso de Python y me gustaría entender cómo funciona el empaquetado con PyInstaller. ¿Puedes explicarme los conceptos básicos de cómo PyInstaller crea ejecutables?",
+      "expected_output": "No debe activarse — la solicitud es una pregunta teórica/educativa sobre PyInstaller, no una solicitud de deconstrucción de un .exe específico.",
+      "should_trigger": false,
+      "files": []
+    }
+  ],
+  "assertions": [
+    {
+      "eval_id": 1,
+      "name": "detecta_pyinstaller",
+      "description": "La respuesta debe comenzar detectando si el .exe es PyInstaller",
+      "check": "includes('PyInstaller') || includes('pyinstxtractor')",
+      "severity": "critical"
+    },
+    {
+      "eval_id": 1,
+      "name": "incluye_preguntas_al_usuario",
+      "description": "Debe incluir preguntas para el usuario sobre el comportamiento observado",
+      "check": "includes('?') && (includes('observ') || includes('ves') || includes('comportamiento'))",
+      "severity": "high"
+    },
+    {
+      "eval_id": 1,
+      "name": "explica_bytecode",
+      "description": "Debe explicar el proceso de análisis de constantes, names y varnames",
+      "check": "includes('constantes') || includes('names') || includes('varnames') || includes('co_const')",
+      "severity": "high"
+    },
+    {
+      "eval_id": 2,
+      "name": "pregunta_por_INT_ambigüo",
+      "description": "Debe preguntar específicamente por el INT:10 que es ambiguo",
+      "check": "includes('10') && (includes('repeticion') || includes('presses') || includes('ambig'))",
+      "severity": "critical"
+    }
+  ]
+}

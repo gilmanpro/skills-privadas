@@ -1,0 +1,112 @@
+---
+name: ui-ux-pro-max
+description: "Inteligencia de diseno UI/UX para web y movil: 50+ estilos, 161 paletas de color, 57 pares tipograficos, 99 guias UX y soporte para stacks React, Next.js, Vue, Svelte, SwiftUI, React Native, Flutter, Tailwind, shadcn/ui y HTML/CSS. Acciones: planificar, construir, crear, disenar, implementar, revisar, corregir, mejorar, optimizar o refactorizar cualquier UI/UX, componente (boton, modal, navbar, sidebar, card, tabla, formulario, grafico) o estilo (glassmorphism, brutalism, minimalismo, dark mode). Usar SIEMPRE en cualquier tarea de diseno de interfaces, incluso si el usuario solo dice 'haz que se vea profesional'."
+---
+
+# UI/UX Pro Max — Inteligencia de Diseno
+
+Guia integral de diseno para aplicaciones web y moviles. Base de datos consultable con recomendaciones priorizadas via CLI.
+
+## Cuando usarla
+
+| Situacion | Accion |
+|-----------|--------|
+| Disenar paginas nuevas | Usar `--design-system` (Paso 2) |
+| Crear/refactorizar componentes | Buscar dominio `style`, `ux` |
+| Elegir colores, tipografia, estilo | Usar `--design-system` |
+| Revisar UI existente | Usar checklist de Referencia Rapida |
+| Implementar modo oscuro | Buscar `--domain style "dark mode"` |
+| El usuario cita un sitio real ("hazlo como Notion/Stripe") o pide acabado "profesional/de agencia" | Extraer su DESIGN.md con tokens reales desde Refero → `references/refero-styles.md` |
+
+## Categorias de Reglas por Prioridad
+
+| Prio | Categoria | Impacto | Anti-patron clave |
+|------|-----------|---------|-------------------|
+| 1 | Accesibilidad | CRITICO | Quitar anillos de foco |
+| 2 | Tactil e Interaccion | CRITICO | Depender solo de hover |
+| 3 | Rendimiento | ALTO | Layout thrashing |
+| 4 | Seleccion de Estilo | ALTO | Emoji como iconos |
+| 5 | Layout y Responsive | ALTO | Scroll horizontal |
+| 6 | Tipografia y Color | MEDIO | Hex raw en componentes |
+| 7 | Animacion | MEDIO | Animar width/height |
+| 8 | Formularios y Feedback | MEDIO | Placeholder como etiqueta |
+| 9 | Patrones de Navegacion | ALTO | Nav sobrecargada |
+| 10 | Graficos y Datos | BAJO | Solo color para datos |
+
+> Para la lista completa de reglas con detalles por categoria, lee `references/reglas-ux.md`.
+
+---
+
+## Como usar
+
+### Paso 1: Analizar Requerimientos
+Extraer: tipo de producto, audiencia, keywords de estilo, stack tecnologico.
+
+### Paso 2: Generar Sistema de Diseno (REQUERIDO)
+```bash
+py scripts/search.py "<producto> <industria> <keywords>" --design-system [-p "Nombre Proyecto"]
+```
+Esto retorna: patron, estilo, colores, tipografia, efectos y anti-patrones.
+
+> **Complemento — Refero Styles**: si el usuario referencia un producto real ("como Notion/Linear/Raycast") o pide un acabado profesional, extrae su sistema de diseño real (colores con rol, escala tipográfica, spacing, componentes con medidas, Do/Don't, tokens CSS/Tailwind) desde https://styles.refero.design/ — flujo de búsqueda y reglas de adaptación en `references/refero-styles.md`.
+
+Para persistir entre sesiones:
+```bash
+py scripts/search.py "<consulta>" --design-system --persist -p "Nombre Proyecto"
+```
+
+### Paso 3: Busquedas Detalladas
+```bash
+py scripts/search.py "<keyword>" --domain <dominio> [-n <max>]
+```
+
+| Necesidad | Comando |
+|-----------|---------|
+| Patrones de producto | `--domain product` |
+| Opciones de estilo | `--domain style` |
+| Paletas de color | `--domain color` |
+| Pares tipograficos | `--domain typography` |
+| Graficos | `--domain chart` |
+| Mejores practicas UX | `--domain ux` |
+| Fuentes Google | `--domain google-fonts` |
+| Estructura landing | `--domain landing` |
+
+### Paso 4: Guias por Stack
+```bash
+py scripts/search.py "<keyword>" --stack <react|nextjs|flutter|swiftui|vue|svelte|shadcn|html-tailwind|react-native>
+```
+
+---
+
+## Dominios y Stacks Disponibles
+
+**Dominios:** `product`, `style`, `typography`, `color`, `landing`, `chart`, `ux`, `google-fonts`, `react`, `web`, `prompt`
+
+**Stacks:** `react-native`, `react`, `nextjs`, `vue`, `svelte`, `angular`, `flutter`, `swiftui`, `shadcn`, `html-tailwind`, `nuxtjs`, `laravel`, `threejs`, `astro`, `javafx`, `jetpack-compose`
+
+---
+
+## Formatos de Salida
+
+```bash
+py scripts/search.py "fintech crypto" --design-system           # Caja ASCII (default)
+py scripts/search.py "fintech crypto" --design-system -f markdown  # Markdown
+```
+
+---
+
+## Checklist Pre-Entrega
+
+- [ ] Contraste texto >=4.5:1 (claro y oscuro)
+- [ ] Objetos tactiles >=44x44pt
+- [ ] Sin scroll horizontal en movil
+- [ ] Sin emojis como iconos (usar SVG)
+- [ ] Sin hex hardcodeados (usar tokens semanticos)
+- [ ] Animaciones 150-300ms con easing nativo
+- [ ] Sin errores en consola
+- [ ] Responsive: 375px, 768px, 1440px
+- [ ] `reduced-motion` soportado
+- [ ] Labels visibles en formularios (no solo placeholder)
+- [ ] Nav inferior <=5 items
+
+> **Referencia UX completa** en `references/reglas-ux.md` — incluye 10 categorias con todas las reglas detalladas de accesibilidad, interaccion, rendimiento, estilo, layout, tipografia, animacion, formularios, navegacion y graficos.

@@ -1,0 +1,23 @@
+{
+  "skill_name": "agent-browser",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Abre https://example.com en una sesion propia, localiza el enlace 'Learn more' con un snapshot, has clic, y devuelve la URL final mas un screenshot guardado en el directorio de trabajo.",
+      "expected_output": "Uso de sesion nombrada (AGENT_BROWSER_SESSION o --session), secuencia open -> snapshot -i -> click por ref @eN -> snapshot posterior, URL final distinta de example.com, y ruta de un .png existente. Sin 'Unknown ref'.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "En https://example.com extrae el texto completo de la pagina en JSON con la estructura {url, titulo, texto} usando los comandos de agent-browser, sin pegar el HTML crudo en la respuesta.",
+      "expected_output": "Salida JSON con las 3 claves pedidas, obtenida con get/eval de agent-browser (no con copia del HTML fuente), y sin secretos ni cookies en la respuesta.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Haz un recorrido de prueba: abre una pagina, espera a que cargue el texto principal con una espera condicional (no con sleep fijo), y toma dos capturas separadas por una accion, devolviendo solo la segunda si la primera no cambio.",
+      "expected_output": "Uso de wait --text/--url/--fn (no 'wait 2000' como espera principal), capturas con --if-changed o logica equivalente que omite la imagen sin cambios, y cierre del navegador con close al terminar.",
+      "files": []
+    }
+  ]
+}

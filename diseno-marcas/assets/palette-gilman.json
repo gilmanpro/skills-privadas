@@ -1,0 +1,299 @@
+{
+  "brand": "gilman.pro",
+  "persona": "Gilberto Castillo — Ingeniero en Telecomunicaciones | Especialista en Big Data y Data Science | Desarrollador de Soluciones",
+  "logo_wordmark_font": ["Rajdhani", "Orbitron", "sans-serif"],
+  "logo_wordmark_weight": 700,
+  "logo_wordmark_color": "#10B981",
+
+  "gradients": {
+    "brand": {
+      "name": "Circuit G (Emerald → Cyan)",
+      "stops": [
+        {"offset": "0%", "color": "#10B981"},
+        {"offset": "100%", "color": "#06B6D4"}
+      ],
+      "angle": "diagonal (0% 0% → 100% 100%)",
+      "css": "linear-gradient(135deg, #10B981 0%, #06B6D4 100%)"
+    },
+    "dark_mode_brand": {
+      "name": "Dark (Cyan → White)",
+      "stops": [
+        {"offset": "0%", "color": "#22D3EE"},
+        {"offset": "100%", "color": "#FFFFFF"}
+      ],
+      "css": "linear-gradient(135deg, #22D3EE 0%, #FFFFFF 100%)"
+    }
+  },
+
+  "light_mode": {
+    "primary": {
+      "name": "Emerald 500",
+      "hex": "#10B981",
+      "rgb": [16, 185, 129],
+      "tailwind": "emerald-500",
+      "usage": "CTA, acentos, separador decorativo, logo"
+    },
+    "primary_hover": {
+      "name": "Emerald 600",
+      "hex": "#059669",
+      "rgb": [5, 150, 105],
+      "tailwind": "emerald-600",
+      "usage": "Hover de botones primary, fondo hero"
+    },
+    "primary_dark": {
+      "name": "Emerald 700",
+      "hex": "#047857",
+      "rgb": [4, 120, 87],
+      "tailwind": "emerald-700",
+      "usage": "Hover más oscuro, énfasis"
+    },
+    "secondary": {
+      "name": "Blue 600",
+      "hex": "#2563EB",
+      "rgb": [37, 99, 235],
+      "tailwind": "blue-600",
+      "usage": "Botón ATS claro, alternancia con emerald"
+    },
+    "accent": {
+      "name": "Cyan 400",
+      "hex": "#22D3EE",
+      "rgb": [34, 211, 238],
+      "tailwind": "cyan-400",
+      "usage": "Acentos secundarios, hover dark, gradiente"
+    },
+    "accent_dark": {
+      "name": "Cyan 500",
+      "hex": "#06B6D4",
+      "rgb": [6, 182, 212],
+      "tailwind": "cyan-500",
+      "usage": "Gradiente del logo, segundo stop"
+    },
+    "navbar": {
+      "name": "Slate 800",
+      "hex": "#1E293B",
+      "rgb": [30, 41, 59],
+      "tailwind": "slate-800",
+      "usage": "Fondo navbar, footer, secciones oscuras"
+    },
+    "navbar_alt": {
+      "name": "Slate 700",
+      "hex": "#334155",
+      "rgb": [51, 65, 85],
+      "tailwind": "slate-700",
+      "usage": "Bordes, íconos social en footer"
+    },
+    "background": {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "rgb": [255, 255, 255],
+      "tailwind": "white",
+      "usage": "Fondo principal"
+    },
+    "background_alt": {
+      "name": "Slate 50",
+      "hex": "#F8FAFC",
+      "rgb": [248, 250, 252],
+      "tailwind": "slate-50",
+      "usage": "Fondo alterno de secciones (cards)"
+    },
+    "text_primary": {
+      "name": "Gray 900",
+      "hex": "#111827",
+      "rgb": [17, 24, 39],
+      "tailwind": "gray-900",
+      "usage": "Títulos y cuerpo principal"
+    },
+    "text_secondary": {
+      "name": "Gray 500",
+      "hex": "#6B7280",
+      "rgb": [107, 114, 128],
+      "tailwind": "gray-500",
+      "usage": "Texto secundario, descripciones"
+    },
+    "text_tertiary": {
+      "name": "Gray 400",
+      "hex": "#9CA3AF",
+      "rgb": [156, 163, 175],
+      "tailwind": "gray-400",
+      "usage": "Texto auxiliar, placeholders, captions"
+    },
+    "border_subtle": {
+      "name": "Gray 200",
+      "hex": "#E5E7EB",
+      "rgb": [229, 231, 235],
+      "tailwind": "gray-200",
+      "usage": "Bordes de inputs, separadores"
+    },
+    "border_card": {
+      "name": "Gray 100",
+      "hex": "#F3F4F6",
+      "rgb": [243, 244, 246],
+      "tailwind": "gray-100",
+      "usage": "Bordes de cards"
+    }
+  },
+
+  "dark_mode": {
+    "primary": {
+      "name": "Indigo 500",
+      "hex": "#6366F1",
+      "rgb": [99, 102, 241],
+      "tailwind": "indigo-500",
+      "usage": "CTA, separador decorativo, fondo hero dark"
+    },
+    "primary_hover": {
+      "name": "Indigo 600",
+      "hex": "#4F46E5",
+      "rgb": [79, 70, 229],
+      "tailwind": "indigo-600",
+      "usage": "Hover de botones dark, botones primary dark"
+    },
+    "primary_700": {
+      "name": "Indigo 700",
+      "hex": "#4338CA",
+      "rgb": [67, 56, 202],
+      "tailwind": "indigo-700",
+      "usage": "Hover más oscuro dark"
+    },
+    "accent": {
+      "name": "Violet 500",
+      "hex": "#8B5CF6",
+      "rgb": [139, 92, 246],
+      "tailwind": "violet-500",
+      "usage": "Acento decorativo (punto final del separador)"
+    },
+    "accent_hover": {
+      "name": "Cyan 400",
+      "hex": "#22D3EE",
+      "rgb": [34, 211, 238],
+      "tailwind": "cyan-400",
+      "usage": "Hover de links, social icons"
+    },
+    "background": {
+      "name": "Slate 900",
+      "hex": "#0F172A",
+      "rgb": [15, 23, 42],
+      "tailwind": "slate-900",
+      "usage": "Fondo principal dark"
+    },
+    "background_alt": {
+      "name": "Slate 800",
+      "hex": "#1E293B",
+      "rgb": [30, 41, 59],
+      "tailwind": "slate-800",
+      "usage": "Fondo alterno dark, cards, secciones"
+    },
+    "card_bg": {
+      "name": "Slate 800 / 80%",
+      "hex": "rgba(30, 41, 59, 0.8)",
+      "rgba": [30, 41, 59, 0.8],
+      "tailwind": "slate-800/80",
+      "usage": "Fondo de cards con efecto glass"
+    },
+    "text_primary": {
+      "name": "White",
+      "hex": "#FFFFFF",
+      "rgb": [255, 255, 255],
+      "tailwind": "white",
+      "usage": "Títulos y cuerpo principal dark"
+    },
+    "text_secondary": {
+      "name": "Slate 400",
+      "hex": "#94A3B8",
+      "rgb": [148, 163, 184],
+      "tailwind": "slate-400",
+      "usage": "Texto secundario dark"
+    },
+    "text_tertiary": {
+      "name": "Slate 500",
+      "hex": "#64748B",
+      "rgb": [100, 116, 139],
+      "tailwind": "slate-500",
+      "usage": "Texto auxiliar dark (cuidado: bajo contraste)"
+    },
+    "border_subtle": {
+      "name": "White / 5%",
+      "hex": "rgba(255, 255, 255, 0.05)",
+      "rgba": [255, 255, 255, 0.05],
+      "tailwind": "white/5",
+      "usage": "Bordes sutiles dark, separadores"
+    },
+    "border_card": {
+      "name": "White / 10%",
+      "hex": "rgba(255, 255, 255, 0.1)",
+      "rgba": [255, 255, 255, 0.1],
+      "tailwind": "white/10",
+      "usage": "Bordes de cards dark"
+    }
+  },
+
+  "typography": {
+    "heading": {
+      "family": "Montserrat",
+      "fallback": "system-ui, sans-serif",
+      "weights": [400, 500, 600, 700, 800],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap"
+    },
+    "body": {
+      "family": "Lato",
+      "fallback": "system-ui, sans-serif",
+      "weights": [300, 400, 700],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap"
+    },
+    "display": {
+      "family": "Orbitron",
+      "fallback": "system-ui, sans-serif",
+      "weights": [400, 500, 600, 700, 800, 900],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&display=swap",
+      "usage": "Números grandes, hero, impacto visual"
+    },
+    "tech": {
+      "family": "Rajdhani",
+      "fallback": "system-ui, sans-serif",
+      "weights": [300, 400, 500, 600, 700],
+      "google_fonts_url": "https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap",
+      "usage": "Wordmark del logo, headings tech, labels condensadas"
+    },
+    "combined_google_fonts_url": "https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Lato:wght@300;400;700&family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&display=swap",
+    "size_scale": {
+      "h1": "2.25rem (36px) mobile, 3.75rem (60px) desktop",
+      "h2": "1.875rem (30px) mobile, 2.25rem (36px) desktop",
+      "h3": "1.5rem (24px)",
+      "h4": "1.125rem (18px)",
+      "body": "1rem (16px)",
+      "small": "0.875rem (14px)",
+      "tiny": "0.75rem (12px)"
+    }
+  },
+
+  "spacing": {
+    "section_padding_y": "5rem (80px) desktop, 4rem (64px) mobile",
+    "container_max_width": "80rem (1280px) - 7xl",
+    "card_padding": "1.25rem (20px)",
+    "button_padding": "0.75rem 1.5rem (12px 24px)",
+    "input_padding": "0.75rem 1rem (12px 16px)"
+  },
+
+  "border_radius": {
+    "button": "0.5rem (8px) - rounded-lg",
+    "input": "0.75rem (12px) - rounded-xl",
+    "card": "0.75rem (12px) - rounded-xl",
+    "card_with_image": "1rem (16px) - rounded-2xl",
+    "badge": "9999px - rounded-full"
+  },
+
+  "shadows": {
+    "card_default": "0 1px 2px 0 rgba(0, 0, 0, 0.05) - shadow-sm",
+    "card_hover": "0 4px 6px -1px rgba(0, 0, 0, 0.1) - shadow-md",
+    "button_default": "0 10px 15px -3px rgba(0, 0, 0, 0.1) - shadow-lg",
+    "button_hover": "0 20px 25px -5px rgba(0, 0, 0, 0.1) - shadow-xl",
+    "hero_image": "0 25px 50px -12px rgba(0, 0, 0, 0.25) - shadow-2xl",
+    "card_dark_hover": "0 10px 15px -3px rgba(99, 102, 241, 0.1) - indigo glow"
+  },
+
+  "decorative_separator": {
+    "name": "Signature separator",
+    "description": "Línea corta + punto + línea larga + punto (violet) + línea corta. Usado bajo cada H2.",
+    "html_snippet": "<div class=\"mt-4 flex items-center justify-center\"><span class=\"h-px w-10 bg-emerald-500 dark:bg-indigo-500\"></span><span class=\"mx-2 w-2 h-2 rounded-full bg-emerald-500 dark:bg-indigo-500\"></span><span class=\"h-px w-16 bg-emerald-500 dark:bg-indigo-500\"></span><span class=\"mx-2 w-2 h-2 rounded-full bg-emerald-500 dark:bg-violet-500\"></span><span class=\"h-px w-10 bg-emerald-500 dark:bg-violet-500\"></span></div>"
+  }
+}

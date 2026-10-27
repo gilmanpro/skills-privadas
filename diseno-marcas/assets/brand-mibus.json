@@ -1,0 +1,242 @@
+{
+  "brand": {
+    "name": "MiBus",
+    "full_name": "MiBus - Transporte Masivo de Panamá",
+    "website": "https://www.mibus.com.pa/",
+    "tagline": "Transporte Masivo de Panamá",
+    "country": "Panamá",
+    "type": "Servicio de transporte público"
+  },
+  "visual_identity": {
+    "mode": "light",
+    "style": "corporativo institucional + moderno",
+    "feel": "Sitio corporativo institucional con identidad de marca fuerte. Combina un layout tradicional (header + hero + stats + social + news + newsletter + footer) con interactividad moderna (slider, parallax, animaciones de scroll). La paleta gira en torno al azul corporativo #283c90 con secciones oscuras de alto contraste para destacar contenido clave."
+  },
+  "colors": {
+    "primary": {
+      "name": "MiBus Primary Blue",
+      "hex": "#283c90",
+      "rgb": "rgb(40, 60, 144)",
+      "description": "Color de marca principal. Usado en títulos, identidad corporativa, links importantes."
+    },
+    "primary_variants": {
+      "light": "#4F5FB5",
+      "dark": "#1B2A66"
+    },
+    "secondary": {
+      "name": "MiBus Secondary Blue",
+      "hex": "#205CA7",
+      "rgba": "rgba(32, 92, 167, 1)",
+      "description": "Color de botones primarios, CTAs, enlaces activos."
+    },
+    "secondary_hover": {
+      "name": "MiBus Secondary Hover",
+      "hex": "#409EFF",
+      "rgba": "rgba(64, 158, 255, 1)",
+      "description": "Estado hover del color secundario. Para botones, links, etc."
+    },
+    "accent": {
+      "name": "MiBus Accent (Twitter Blue)",
+      "hex": "#1DA1F2",
+      "rgb": "rgb(29, 161, 242)",
+      "description": "Color de acento. Usado en secciones especiales, links destacados, badges."
+    },
+    "dark": {
+      "name": "MiBus Dark (Header/Footer)",
+      "hex": "#1A1A2E",
+      "description": "Color oscuro usado en header y footer. Inferred del theme Composer."
+    },
+    "background": {
+      "name": "MiBus Background",
+      "hex": "#FFFFFF",
+      "rgb": "rgb(255, 255, 255)",
+      "description": "Fondo principal del sitio."
+    },
+    "text": {
+      "primary": "#333333",
+      "secondary": "#666666",
+      "light": "#FFFFFF",
+      "muted": "#999999"
+    },
+    "border": {
+      "default": "#E0E0E0",
+      "subtle": "#F0F0F0"
+    },
+    "state": {
+      "success": "#B5D531",
+      "warning": "#F39C12",
+      "error": "#BC0C06",
+      "info": "#1DA1F2"
+    },
+    "ui": {
+      "scroll_top": "#B5D531",
+      "bullets_inactive": "rgba(125, 125, 125, 0.5)",
+      "bullets_active": "rgb(125, 125, 125)",
+      "overlay_dark": "rgba(0, 0, 0, 0.5)",
+      "overlay_darker": "rgba(0, 0, 0, 0.75)"
+    }
+  },
+  "typography": {
+    "heading": {
+      "family": "Poppins",
+      "source": "Google Fonts",
+      "url": "https://fonts.googleapis.com/css?family=Poppins:100,600,700,900&display=swap",
+      "weights": {
+        "thin": 100,
+        "semibold": 600,
+        "bold": 700,
+        "black": 900
+      },
+      "use": "Títulos, headings, H1-H6, números destacados"
+    },
+    "body": {
+      "family": "Roboto",
+      "source": "Google Fonts",
+      "url": "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700&display=swap",
+      "weights": {
+        "light": 300,
+        "regular": 400,
+        "medium": 500,
+        "semibold": 600,
+        "bold": 700
+      },
+      "use": "Texto general, párrafos, botones, captions"
+    },
+    "fallback_stack": {
+      "heading": "'Poppins', 'Arial', 'Helvetica', sans-serif",
+      "body": "'Roboto', 'Arial', 'Helvetica', sans-serif"
+    },
+    "google_fonts_combined_url": "https://fonts.googleapis.com/css?family=Roboto:300,400,500,600,700%7CPoppins:100,600,700,900&display=swap"
+  },
+  "logo": {
+    "primary": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2019/03/logo-1.png",
+      "alt": "MiBus",
+      "use": "Header, portada, encabezado de documentos"
+    },
+    "retina": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2020/05/retina-logo.png",
+      "alt": "MiBus",
+      "use": "Pantallas retina, impresión de alta calidad"
+    },
+    "footer": {
+      "url": "https://www.mibus.com.pa/wp-content/themes/composer-child/_images/logo-1.png",
+      "alt": "MiBus",
+      "use": "Footer del sitio web (versión ligeramente diferente)"
+    },
+    "favicon": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2020/05/favicon.png",
+      "alt": "MiBus",
+      "size": "small square",
+      "use": "Favicon, ícono de app, redes sociales"
+    }
+  },
+  "assets": {
+    "hero_background_stats": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2023/08/1920x566.jpg",
+      "size": "1920x566",
+      "use": "Sección de estadísticas, hero de portada"
+    },
+    "newsletter_background": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2019/04/bg-Newsletter.png",
+      "use": "Sección de call-to-action, suscripción"
+    },
+    "social_section_background": {
+      "url": "https://www.mibus.com.pa/wp-content/uploads/2025/12/Redes-1A-Mibus-18.png",
+      "use": "Sección de redes sociales"
+    },
+    "bg_pattern": {
+      "url": "https://mibus.com.pa/wp-content/uploads/2019/07/bg.png",
+      "use": "Background de sección general"
+    }
+  },
+  "icons": {
+    "icon_set_used": "pix-icons (theme Composer) + Font Awesome 5.6 + revicons",
+    "style": "flat, line icons 1.5-2px stroke",
+    "color_when_default": "#205CA7",
+    "color_on_dark_bg": "#FFFFFF",
+    "recommended_alternatives": [
+      "Lucide (https://lucide.dev)",
+      "Heroicons (https://heroicons.com)",
+      "Feather Icons (https://feathericons.com)",
+      "Font Awesome 6 (https://fontawesome.com)"
+    ]
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/oficialmibuspty/",
+    "twitter": "https://twitter.com/OficialMiBus",
+    "instagram": "https://www.instagram.com/oficialmibus/",
+    "linkedin": "https://pa.linkedin.com/company/mibus",
+    "youtube": "https://www.youtube.com/channel/UCN0lsfIURO1hGIV3wBhpenw",
+    "whatsapp": "https://api.whatsapp.com/send?phone=50767812906",
+    "servicio_311": "https://311.gob.pa/"
+  },
+  "components": {
+    "buttons": {
+      "primary": {
+        "background": "#205CA7",
+        "color": "#FFFFFF",
+        "border": "1px solid #205CA7",
+        "border_radius": "1-4px",
+        "padding": "10px 30px",
+        "font_weight": "bold",
+        "font_family": "'Roboto', Arial, sans-serif",
+        "font_size": "14px"
+      },
+      "primary_hover": {
+        "background": "#409EFF",
+        "border": "1px solid #409EFF",
+        "color": "#FFFFFF"
+      },
+      "secondary": {
+        "background": "transparent",
+        "color": "#205CA7",
+        "border": "2px solid #205CA7",
+        "border_radius": "1-4px",
+        "padding": "10px 30px"
+      }
+    },
+    "header": {
+      "background": "#1A1A2E (dark, inferred)",
+      "logo_position": "top-left",
+      "nav_position": "right",
+      "sticky_background": "#FFFFFF (sticky-light)",
+      "text_color": "#FFFFFF",
+      "text_color_sticky": "#283c90"
+    },
+    "footer": {
+      "background": "#1A1A2E (dark, inferred)",
+      "text_color": "#FFFFFF",
+      "layout": "6 columns"
+    }
+  },
+  "stats": {
+    "units": "1436",
+    "workers": "+4,000",
+    "routes": "152",
+    "daily_passengers": "450,000"
+  },
+  "tone_of_voice": {
+    "language": "es-ES (español de Panamá)",
+    "style": "Institucional pero cercano, profesional pero accesible",
+    "examples": [
+      "Sé el primero en recibir todos los artículos, noticias y novedades de rutas",
+      "Transporte Masivo de Panamá",
+      "Servicio al Cliente"
+    ]
+  },
+  "metadata": {
+    "extracted_from": "https://www.mibus.com.pa/",
+    "extraction_date": "2026-06-30",
+    "theme_used": "WordPress + Composer (SQLi)",
+    "extraction_notes": "Colores del header/footer (dark) son inferidos del theme Composer, no explícitos en el HTML público."
+  },
+  "author": {
+    "name": "Gilberto Castillo",
+    "role": "Analista de Programación",
+    "department": "Programación",
+    "code": "13138",
+    "company": "MiBus - Transporte Masivo de Panamá",
+    "notes": "Usar como autor/metadata en documentos, presentaciones y entregables corporativos."
+  }
+}
