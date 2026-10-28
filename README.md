@@ -1,41 +1,33 @@
 # skills-privadas
 
-Coleccion **privada** de 14 skills de OpenCode (estandar [Agent Skills](https://agentskills.io)) que no tienen repositorio propio. Espejo de las carpetas de `~/.agents/skills/`; cada carpeta es una skill autocontenida (`SKILL.md` + `references/` + `scripts/` cuando aplica).
+Indice **privado** de referencia de la coleccion de skills de OpenCode de [gilmanpro](https://github.com/gilmanpro) sin visibilidad publica. Cada skill vive en su **propio repositorio privado** (espejo de `~/.agents/skills/<nombre>/`); este repo ya no guarda contenido: solo la ficha y el enlace.
 
-## Skills incluidas
+| Skill | Que hace | Repo |
+|---|---|---|
+| agent-browser | Guia en espanol de la CLI `agent-browser` de Vercel (automatizacion de navegador por CDP) | [gilmanpro/agent-browser](https://github.com/gilmanpro/agent-browser) |
+| ciberseguridad | Auditoria de seguridad y hardening de proyectos software propios (web, API, red) | [gilmanpro/ciberseguridad](https://github.com/gilmanpro/ciberseguridad) |
+| cloudpanel-cli | CLI de CloudPanel (`clpctl`): IPs de Cloudflare, backups, dominios, SSL | [gilmanpro/cloudpanel-cli](https://github.com/gilmanpro/cloudpanel-cli) |
+| computer-use-orca | Inspeccion y entrada de escritorio en ventanas visibles via `orca` | [gilmanpro/computer-use-orca](https://github.com/gilmanpro/computer-use-orca) |
+| context7 | Skill oficial de Context7 (docs y APIs actualizadas; contenido upstream en ingles) | [gilmanpro/context7](https://github.com/gilmanpro/context7) |
+| curl-expert | Experto en curl: peticiones HTTP/HTTPS desde terminal y depuracion | [gilmanpro/curl-expert](https://github.com/gilmanpro/curl-expert) |
+| dev-stack | Stack unificado de desarrollo: UI web, Go, compilacion, despliegue y decompilacion PyInstaller | [gilmanpro/dev-stack](https://github.com/gilmanpro/dev-stack) |
+| diseno-marcas | Identidad visual de MiBus, ITSE, gilman.pro y Electrocontrol | [gilmanpro/diseno-marcas](https://github.com/gilmanpro/diseno-marcas) |
+| gilman-correo | Envio de correos electronicos desde el servidor Gilman Mail (gilman.pro) | [gilmanpro/gilman-correo](https://github.com/gilmanpro/gilman-correo) |
+| orca-cli | Operar worktrees, contextos de carpeta, terminales, repos y automatizaciones de Orca | [gilmanpro/orca-cli](https://github.com/gilmanpro/orca-cli) |
+| orchestration | Orquestar workers de Orca coordinados (mensajes, ask/reply, tareas) | [gilmanpro/orchestration](https://github.com/gilmanpro/orchestration) |
+| playwright-cli | Automatizacion de navegador con Playwright CLI | [gilmanpro/playwright-cli](https://github.com/gilmanpro/playwright-cli) |
+| validacion-con-commandcode | Delegar la validacion de entregables a Command Code (`cmdc`) en modo headless | [gilmanpro/validacion-con-commandcode](https://github.com/gilmanpro/validacion-con-commandcode) |
+| wsl-raspberry-ssh | Crear una distro WSL del SO elegido y conectar por SSH a una Raspberry Pi | [gilmanpro/wsl-raspberry-ssh](https://github.com/gilmanpro/wsl-raspberry-ssh) |
 
-| Skill | Que hace |
-|---|---|
-| `agent-browser` | Guia en espanol de la CLI `agent-browser` de Vercel (automatizacion de navegador por CDP) |
-| `ciberseguridad` | Auditoria de seguridad y hardening de proyectos software propios (web, API, red) |
-| `cloudpanel-cli` | CLI de CloudPanel (`clpctl`): IPs de Cloudflare, backups, dominios, SSL |
-| `computer-use-orca` | Inspeccion y entrada de escritorio en ventanas visibles via `orca` |
-| `context7` | Skill oficial de Context7 (docs y APIs actualizadas; contenido upstream en ingles) |
-| `curl-expert` | Experto en curl: peticiones HTTP/HTTPS desde terminal y depuracion |
-| `dev-stack` | Stack unificado de desarrollo: UI web, Go, compilacion, despliegue y decompilacion PyInstaller |
-| `diseno-marcas` | Identidad visual de MiBus, ITSE, gilman.pro y Electrocontrol |
-| `gilman-correo` | Envio de correos electronicos desde el servidor Gilman Mail (gilman.pro) |
-| `orca-cli` | Operar worktrees, contextos de carpeta, terminales, repos y automatizaciones de Orca |
-| `orchestration` | Orquestar workers de Orca coordinados (mensajes, ask/reply, tareas) |
-| `playwright-cli` | Automatizacion de navegador con Playwright CLI |
-| `validacion-con-commandcode` | Delegar la validacion de entregables a Command Code (`cmdc`) en modo headless |
-| `wsl-raspberry-ssh` | Crear una distro WSL del SO elegido y conectar por SSH a una Raspberry Pi |
+No incluida: `go-worker-pool` (carpeta sin `SKILL.md`, no es una skill registrada).
+
+**Indice de las skills con repo publico**: [skills-publicas](https://github.com/gilmanpro/skills-publicas).
 
 ## Instalacion
 
-Copia la carpeta de la skill que necesites a:
+Copia la carpeta de la skill desde su repo a `~/.agents/skills/<nombre>/` (global) o `<proyecto>/.opencode/skills/<nombre>/`, o usa `cmdc skills add gilmanpro/<nombre> -g` (los repos privados requieren `gh auth login`).
 
-- `~/.agents/skills/<nombre>/` (global, compatibilidad herencia)
-- `<proyecto>/.opencode/skills/<nombre>/` (proyecto)
+## Notas
 
-## Notas de publicacion
-
-- Contenido sanitizado: sin rutas personales (placeholders `C:\Users\...` / `C:\Users\yo` son ejemplos), sin secretos (solo referencias `${env:VAR}` / `{file:...}`) y sin IPs reales (CIDRs `192.168.x.x` etc. son ejemplos de documentacion).
-- Excluido de este espejo el estado generado: `.tmp/`, `.cache/`, `__pycache__/`, `.env`, `.uso_diario.json`, `node_modules/` y los junctions del vendor UI/UX de `dev-stack` (su contenido real vive en `dev-stack/ui-ux-pro-max/repo/`).
-
-## Verificacion
-
-```bash
-python skill-creator/scripts/quick_validate.py <nombre>
-python skill-creator/scripts/auditar_seguridad.py <nombre>
-```
+- Cada repo por skill excluyo el estado generado (`.tmp/`, `.cache/`, `__pycache__/`, `.env`) y los junctions del vendor UI/UX de `dev-stack` (su contenido real vive en `dev-stack/ui-ux-pro-max/repo/`).
+- Verificacion de cada skill: `python skill-creator/scripts/quick_validate.py <nombre>` y `python skill-creator/scripts/auditar_seguridad.py <nombre>`.
