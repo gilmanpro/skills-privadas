@@ -12,6 +12,7 @@ Indice **publico** de referencia de la coleccion de skills de OpenCode de [gilma
 | curl-expert | Experto en curl: peticiones HTTP/HTTPS desde terminal y depuracion | [gilmanpro/curl-expert](https://github.com/gilmanpro/curl-expert) |
 | dev-stack | Stack unificado de desarrollo: UI web, Go, compilacion, despliegue y decompilacion PyInstaller | [gilmanpro/dev-stack](https://github.com/gilmanpro/dev-stack) |
 | diseno-marcas | Identidad visual de MiBus, ITSE, gilman.pro y Electrocontrol | [gilmanpro/diseno-marcas](https://github.com/gilmanpro/diseno-marcas) |
+| git | Gestion experta de Git: ramas, merge/rebase, deshacer seguro, worktrees, hooks | [gilmanpro/git](https://github.com/gilmanpro/git) |
 | gilman-correo | Envio de correos electronicos desde el servidor Gilman Mail (gilman.pro) | [gilmanpro/gilman-correo](https://github.com/gilmanpro/gilman-correo) |
 | orca-cli | Operar worktrees, contextos de carpeta, terminales, repos y automatizaciones de Orca | [gilmanpro/orca-cli](https://github.com/gilmanpro/orca-cli) |
 | orchestration | Orquestar workers de Orca coordinados (mensajes, ask/reply, tareas) | [gilmanpro/orchestration](https://github.com/gilmanpro/orchestration) |
