@@ -16,7 +16,7 @@ Indice **privado** de referencia de la coleccion de skills de OpenCode de [gilma
 | orca-cli | Operar worktrees, contextos de carpeta, terminales, repos y automatizaciones de Orca | [gilmanpro/orca-cli](https://github.com/gilmanpro/orca-cli) |
 | orchestration | Orquestar workers de Orca coordinados (mensajes, ask/reply, tareas) | [gilmanpro/orchestration](https://github.com/gilmanpro/orchestration) |
 | playwright-cli | Automatizacion de navegador con Playwright CLI | [gilmanpro/playwright-cli](https://github.com/gilmanpro/playwright-cli) |
-| skills-archivadas | Respaldo historico del arbol `archivadas/`: 26 skills archivadas (absorbidas por las super skills consolidadas o retiradas), contenido sanitizado; no es una skill individual sino el espejo del grupo | [gilmanpro/skills-archivadas](https://github.com/gilmanpro/skills-archivadas) |
+| skills-archivadas | Respaldo historico del arbol `archivadas/`: 27 skills archivadas (absorbidas por las super skills consolidadas o retiradas), contenido sanitizado; no es una skill individual sino el espejo del grupo | [gilmanpro/skills-archivadas](https://github.com/gilmanpro/skills-archivadas) |
 | validacion-con-commandcode | Delegar la validacion de entregables a Command Code (`cmdc`) en modo headless | [gilmanpro/validacion-con-commandcode](https://github.com/gilmanpro/validacion-con-commandcode) |
 | wsl-raspberry-ssh | Crear una distro WSL del SO elegido y conectar por SSH a una Raspberry Pi | [gilmanpro/wsl-raspberry-ssh](https://github.com/gilmanpro/wsl-raspberry-ssh) |
 
