@@ -1,6 +1,6 @@
 # skills-privadas
 
-Indice **privado** de referencia de la coleccion de skills de OpenCode de [gilmanpro](https://github.com/gilmanpro) sin visibilidad publica. Cada skill vive en su **propio repositorio privado** (espejo de `~/.agents/skills/<nombre>/`); este repo ya no guarda contenido: solo la ficha y el enlace.
+Indice **publico** de referencia de la coleccion de skills de OpenCode de [gilmanpro](https://github.com/gilmanpro): las skills apuntadas viven en **repositorios PRIVADOS propios** (espejo de `~/.agents/skills/<nombre>/`) — enlazar a ellos da 404 sin acceso. Este repo ya no guarda contenido: solo la ficha y el enlace.
 
 | Skill | Que hace | Repo |
 |---|---|---|
